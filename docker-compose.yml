@@ -3,7 +3,7 @@ version: '3.8'
 services:
   qr-bistor-notification-api-2-nginx:
     image: nginx:alpine
-    container_name: 'qr-bistor-notification-api-nginx'
+    container_name: 'qr-bistor-notification-api-2-nginx'
     volumes:
       - ./nginx:/etc/nginx/conf.d
     environment:
@@ -11,7 +11,7 @@ services:
     restart: always
   # app เปลี่ยนชื่อตามชื่อ service ถ้ามีหลายอันก็อย่าซ้ำกัน
   qr-bistor-notification-api-2:
-    image: qr-bistor-notification-api:latest
+    image: qr-bistor-notification-api-2:latest
     build: .
     container_name: "qr-bistor-notification-api-2"
     env_file:
