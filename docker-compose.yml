@@ -1,19 +1,19 @@
 version: '3.8'
 
 services:
-  project-a-api-nginx:
+  qr-bistor-notification-api-nginx:
     image: nginx:alpine
-    container_name: 'project-a-api-nginx'
+    container_name: 'qr-bistor-notification-api-nginx'
     volumes:
       - ./nginx:/etc/nginx/conf.d
     environment:
-      VIRTUAL_HOST: project-a-api.tent-official.com
+      VIRTUAL_HOST: qr-bistor-notification-api-2.tent-official.com
     restart: always
   # app เปลี่ยนชื่อตามชื่อ service ถ้ามีหลายอันก็อย่าซ้ำกัน
-  project-a-api:
-    image: project-a-api:latest
+  qr-bistor-notification-api:
+    image: qr-bistor-notification-api:latest
     build: .
-    container_name: "project-a-api"
+    container_name: "qr-bistor-notification-api"
     env_file:
       - ./.env
     restart: always
