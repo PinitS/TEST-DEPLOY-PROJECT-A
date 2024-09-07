@@ -10,7 +10,7 @@ services:
       VIRTUAL_HOST: qr-bistor-notification-api-2.tent-official.com
     restart: always
   # app เปลี่ยนชื่อตามชื่อ service ถ้ามีหลายอันก็อย่าซ้ำกัน
-  qr-bistor-notification-api=2:
+  qr-bistor-notification-api-2:
     image: qr-bistor-notification-api:latest
     build: .
     container_name: "qr-bistor-notification-api-2"
