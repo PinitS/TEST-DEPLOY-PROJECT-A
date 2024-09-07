@@ -7,7 +7,7 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
     environment:
-      VIRTUAL_HOST: project-a-tent-api.tent-official.com
+      VIRTUAL_HOST: project-a-api.tent-official.com
     restart: always
   # app เปลี่ยนชื่อตามชื่อ service ถ้ามีหลายอันก็อย่าซ้ำกัน
   project-a-api:
